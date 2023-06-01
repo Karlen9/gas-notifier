@@ -3,6 +3,7 @@ import { Command } from "./command.class";
 import { IBotContext } from "../context/context.interface";
 import { getTxPrice } from "../utils/get-tx-price";
 import { getEthPrice } from "../api/getEthPrice";
+import { intervalRequest } from "../utils/intervalRequest";
 
 export class StartCommand extends Command {
   constructor(bot: Telegraf<IBotContext>) {
@@ -25,8 +26,7 @@ export class StartCommand extends Command {
     // });
 
     this.bot.action("eth_price", async (ctx) => {
-      const ethPrice = await getEthPrice();
-      ctx.sendMessage(`Ethereum price: ${parseInt(ethPrice).toFixed(1)}`);
+      await intervalRequest({ctx, frequency: 5000});
     });
   }
 }
