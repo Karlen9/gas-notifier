@@ -1,8 +1,6 @@
 import { Markup, Telegraf } from "telegraf";
 import { Command } from "./command.class";
 import { IBotContext } from "../context/context.interface";
-import { getTxPrice } from "../utils/get-tx-price";
-import { getEthPrice } from "../api/getEthPrice";
 import { intervalRequest } from "../utils/intervalRequest";
 
 export class StartCommand extends Command {

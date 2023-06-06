@@ -1,4 +1,4 @@
-import { getEthPrice } from "../api/getEthPrice";
+import { getEthPrice } from "../../api/getEthPrice";
 import { IBotContext } from "../context/context.interface";
 
 

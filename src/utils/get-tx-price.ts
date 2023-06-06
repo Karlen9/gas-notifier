@@ -1,5 +1,5 @@
 import Web3 from "web3";
-import { getEthPrice } from "../api/getEthPrice";
+import { getEthPrice } from "../../api/getEthPrice";
 import { IBotContext } from "../context/context.interface";
 import { Telegraf } from "telegraf";
 export const getTxPrice = async (bot: Telegraf<IBotContext>) => {
