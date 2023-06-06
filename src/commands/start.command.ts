@@ -26,7 +26,7 @@ export class StartCommand extends Command {
     // });
 
     this.bot.action("eth_price", async (ctx) => {
-      await intervalRequest({ctx, frequency: 5000});
+      await intervalRequest({ctx, frequency: 20000});
     });
   }
 }
